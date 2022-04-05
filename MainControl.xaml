@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="McZiper4ObserverBot.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:McZiper4ObserverBot"
+             xmlns:ui="clr-namespace:WPFUI.Controls;assembly=WPFUI"
+             mc:Ignorable="d" 
+             Width="750"
+             d:DesignHeight="450" d:DesignWidth="750">
+    <StackPanel>
+        <ui:CardControl Title="ワールドデータ" Icon="Map24" x:Name="WorldDataBox"
+                        Margin="0,10,0,0">
+            <ui:Button x:Name="WorldDataBtn" Content="参照" Cursor="Hand"
+                       Appearance="Secondary"></ui:Button>
+        </ui:CardControl>
+        <ui:CardExpander Header="プラグイン" Icon="Box24" Margin="0,10,0,0"
+                         x:Name="PluginExpander" Subtitle="0個のプラグイン">
+            <ui:CardExpander.HeaderContent>
+                <ui:Button x:Name="PluginAddBtn" Content="追加" Margin="0,0,10,0"
+                           Appearance="Secondary"></ui:Button>
+            </ui:CardExpander.HeaderContent>
+            <StackPanel x:Name="PluginsBox"></StackPanel>
+        </ui:CardExpander>
+        <ui:CardExpander Header="Mod" Icon="Box24" Margin="0,10,0,0"
+                         x:Name="ModExpander" Subtitle="0個のモッド">
+            <ui:CardExpander.HeaderContent>
+                <ui:Button x:Name="ModAddBtn" Content="追加" Margin="0,0,10,0"
+                           Appearance="Secondary"></ui:Button>
+            </ui:CardExpander.HeaderContent>
+            <StackPanel x:Name="ModsBox"></StackPanel>
+        </ui:CardExpander>
+        <ui:CardExpander Header="プロパティ" Icon="Settings24" Margin="0,10,0,0">
+            <ui:CardExpander.HeaderContent>
+                <ui:Button x:Name="PropAddBtn" Content="参照" Margin="0,0,10,0"
+                           Appearance="Secondary"></ui:Button>
+            </ui:CardExpander.HeaderContent>
+            <StackPanel x:Name="PropsBox"></StackPanel>
+        </ui:CardExpander>
+        <Button Content="ZIPを作成する" Margin="0,10,0,0" Cursor="Hand"
+                x:Name="CreateZipBtn"/>
+    </StackPanel>
+</UserControl>
